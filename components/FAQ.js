@@ -1,0 +1,47 @@
+"use client";
+import { useState } from "react";
+import { SITE } from "@/lib/site";
+
+const FAQS = [
+  { q: "Is PrimeGearLab the TESWAY store?", a: "No. PrimeGearLab is an independent publisher. Purchases are completed on the merchant's website, which opens in a new tab when you tap a button." },
+  { q: "What happens when I tap a button?", a: "The merchant's site opens in a new tab and this page stays open, so you can come back and keep comparing." },
+  { q: "How far can these bikes go on a charge?", a: "The merchant lists a max range of up to 200 miles for the 52V 60AH models and 70-100 miles for the X9 Ultra. Actual range depends on rider weight, terrain, speed and assist level." },
+  { q: "How long does shipping take?", a: "The merchant lists free shipping with delivery in 3-7 business days. This page does not state the warehouse location or duty terms, so confirm the details for your address at checkout." },
+  { q: "Is there a warranty?", a: "The merchant lists a 2-year warranty covering product defects or malfunctions. Read the merchant's warranty policy for full terms." },
+  { q: "Are the prices and savings final?", a: `No. Prices are as listed on the merchant site on ${SITE.dataDate} and can change. The merchant's checkout shows the current price.` },
+  { q: "What about returns and support?", a: "Return terms are set by the merchant. Review its return and refund policy before ordering. The merchant also lists live chat customer service on its site." },
+];
+
+export default function FAQ() {
+  const [open, setOpen] = useState(0);
+  return (
+    <section id="faq" className="mx-auto max-w-3xl scroll-mt-24 px-4 py-12" aria-labelledby="faq-title">
+      <h2 id="faq-title" className="text-2xl font-extrabold sm:text-3xl">Frequently asked questions</h2>
+      <div className="mt-6 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+        {FAQS.map((f, i) => {
+          const isOpen = open === i;
+          return (
+            <div key={f.q}>
+              <h3>
+                <button
+                  type="button"
+                  id={`faq-btn-${i}`}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex min-h-14 w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold"
+                >
+                  <span>{f.q}</span>
+                  <span aria-hidden="true" className="text-xl text-brand">{isOpen ? "−" : "+"}</span>
+                </button>
+              </h3>
+              <div id={`faq-panel-${i}`} role="region" aria-labelledby={`faq-btn-${i}`} hidden={!isOpen} className="px-5 pb-5 text-slate-600">
+                {f.a}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}

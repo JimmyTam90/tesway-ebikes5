@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/tesway", "destination": "https://tesway-ebikes5.vercel.app/tesway" },
+    { "source": "/tesway/:path*", "destination": "https://tesway-ebikes5.vercel.app/tesway/:path*" }
+  ]
+}

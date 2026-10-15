@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: #f8fafc; color: #0f172a; overflow-x: hidden; }
+:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+.on-dark :focus-visible, header :focus-visible, footer :focus-visible { outline-color: #93c5fd; }
