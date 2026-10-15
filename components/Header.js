@@ -16,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || typeof document === "undefined") return;
     const onKey = (e) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -34,8 +34,8 @@ export default function Header() {
               <a key={n.href} href={n.href} className="hover:text-blue-300">{n.label}</a>
             ))}
           </nav>
-          <CTAButton type="collection" k="all-ebikes" ctaId="header-explore" className="min-h-11 px-5 py-2 text-sm">
-            Explore E-Bikes
+          <CTAButton type="collection" k="prime-day-deals" ctaId="header-deals" className="min-h-11 px-5 py-2 text-sm">
+            Shop the Deals
           </CTAButton>
         </div>
 
@@ -62,7 +62,7 @@ export default function Header() {
               <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="border-b border-slate-800 py-4 text-lg font-semibold">{n.label}</a>
             ))}
           </nav>
-          <CTAButton type="collection" k="all-ebikes" ctaId="mobile-menu-explore" className="mt-5 w-full">Explore E-Bikes</CTAButton>
+          <CTAButton type="collection" k="prime-day-deals" ctaId="mobile-menu-deals" className="mt-5 w-full">Shop Prime Day Deals</CTAButton>
         </div>
       )}
     </header>

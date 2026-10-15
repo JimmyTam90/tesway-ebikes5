@@ -12,8 +12,8 @@ export default function ProductGrid() {
           current pricing at checkout.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PRODUCTS.map((p) => (
-            <ProductCard key={p.id} product={p} />
+          {(PRODUCTS ?? []).map((p) => (
+            <ProductCard key={p?.id} product={p} />
           ))}
         </div>
       </div>

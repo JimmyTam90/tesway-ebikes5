@@ -1,5 +1,5 @@
-import Image from "next/image";
 import CTAButton from "./CTAButton";
+import RemoteImage from "./RemoteImage";
 import { FEATURED } from "@/lib/products";
 import { SITE } from "@/lib/site";
 
@@ -26,10 +26,9 @@ export default function Hero() {
         </div>
 
         <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-700 bg-white p-3 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center">
-          <Image
-        unoptimized
-            src={FEATURED.image}
-            alt={FEATURED.alt}
+          <RemoteImage
+            src={FEATURED?.image}
+            alt={FEATURED?.alt ?? "TESWAY electric bike"}
             width={800}
             height={800}
             priority
@@ -40,7 +39,7 @@ export default function Hero() {
 
         <div className="md:col-start-1 md:row-start-2 md:self-start">
           <div className="flex flex-col gap-3 sm:flex-row">
-            <CTAButton type="collection" k="all-ebikes" ctaId="hero-primary">Shop All TESWAY E-Bikes</CTAButton>
+            <CTAButton type="collection" k="prime-day-deals" ctaId="hero-primary">Shop Prime Day Deals</CTAButton>
             <a href="#compare" className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-white px-6 py-3 font-bold hover:bg-slate-800">
               Compare Models
             </a>

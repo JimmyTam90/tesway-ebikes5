@@ -9,7 +9,7 @@ const PIXEL = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 // Loads nothing unless real IDs are configured. Click tracking is passive: it never alters or blocks navigation.
 export default function Analytics() {
   useEffect(() => {
-    if (!GA && !ADS && !PIXEL) return;
+    if (typeof document === "undefined" || (!GA && !ADS && !PIXEL)) return;
     const onClick = (e) => {
       const el = e.target instanceof Element ? e.target.closest("a[data-affiliate-cta]") : null;
       if (!el) return;
