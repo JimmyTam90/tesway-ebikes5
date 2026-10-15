@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/tesway/logo.png";
+import logo from "../public/logo.png";
 
 // Logo-only branding: the image already contains the brand name, so no text label is added beside it.
 // Static import means the URL respects basePath/assetPrefix automatically.
