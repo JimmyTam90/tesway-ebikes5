@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import CTAButton from "./CTAButton";
 
 const NAV = [
+  { href: "#prime-day", label: "Prime Day Deals" },
   { href: "#collections", label: "Collections" },
   { href: "#models", label: "Models" },
   { href: "#compare", label: "Compare" },

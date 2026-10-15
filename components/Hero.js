@@ -27,6 +27,7 @@ export default function Hero() {
 
         <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-700 bg-white p-3 md:col-start-2 md:row-span-2 md:row-start-1 md:self-center">
           <Image
+        unoptimized
             src={FEATURED.image}
             alt={FEATURED.alt}
             width={800}

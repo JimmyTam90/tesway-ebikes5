@@ -1,5 +1,5 @@
 /** Hub-Spoke deployment: served publicly at https://primegearlab.com/tesway */
-const SUBPATH = "/tesway";
+const SUBPATH = process.env.NEXT_PUBLIC_BASE_PATH || "/tesway";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

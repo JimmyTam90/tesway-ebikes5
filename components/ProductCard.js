@@ -16,6 +16,7 @@ export default function ProductCard({ product }) {
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="bg-slate-100 p-3">
         <Image
+        unoptimized
           src={product.image}
           alt={product.alt}
           width={800}

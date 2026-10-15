@@ -8,6 +8,7 @@ export default function Logo({ className = "h-16 w-16", priority = false }) {
   return (
     <Link href="/" aria-label="PrimeGearLab home" className="inline-flex shrink-0">
       <Image
+        unoptimized
         src={logo}
         alt="PrimeGearLab - Independent Lab"
         priority={priority}

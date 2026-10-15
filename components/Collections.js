@@ -12,7 +12,7 @@ export default function Collections() {
           {COLLECTIONS.map((c) => (
             <article key={c.id} className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
               <div className="bg-white p-3">
-                <Image src={c.image} alt={c.alt} width={800} height={800} sizes="(min-width: 768px) 360px, 100vw" className="h-48 w-full object-contain sm:h-56" />
+                <Image unoptimized src={c.image} alt={c.alt} width={800} height={800} sizes="(min-width: 768px) 360px, 100vw" className="h-48 w-full object-contain sm:h-56" />
               </div>
               <h3 className="px-5 pt-5 text-xl font-bold">{c.title}</h3>
               <div className="px-5 pb-5 pt-2 text-sm text-slate-600">{c.description}</div>

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PrimeDayBanner from "@/components/PrimeDayBanner";
 import Highlights from "@/components/Highlights";
 import Collections from "@/components/Collections";
 import ProductGrid from "@/components/ProductGrid";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PrimeDayBanner />
         <Highlights />
         <Collections />
         <ProductGrid />

@@ -3,9 +3,20 @@ import Analytics from "@/components/Analytics";
 import { MERCHANT_ORIGIN } from "@/lib/affiliate";
 import { SITE, OG_IMAGE } from "@/lib/site";
 
-// Favicon and apple icon come from app/favicon.ico, app/icon.png and app/apple-icon.png
-// (file-based metadata, which Next.js prefixes with basePath automatically).
+// Favicon files live in public/ and are linked by absolute URL on the spoke deployment, so they
+// load no matter which public path the Hub proxy uses.
+const ICON_BASE = `${SITE.spokeOrigin}${SITE.subpath}`;
+
 export const metadata = {
+  icons: {
+    icon: [
+      { url: `${ICON_BASE}/favicon.ico`, sizes: "any" },
+      { url: `${ICON_BASE}/favicon-32.png`, type: "image/png", sizes: "32x32" },
+      { url: `${ICON_BASE}/favicon-192.png`, type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: `${ICON_BASE}/favicon.ico`,
+    apple: [{ url: `${ICON_BASE}/apple-touch-icon.png`, sizes: "180x180" }],
+  },
   metadataBase: new URL(SITE.origin),
   title: SITE.title,
   description: SITE.description,

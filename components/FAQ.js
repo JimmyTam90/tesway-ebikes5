@@ -9,6 +9,7 @@ const FAQS = [
   { q: "How long does shipping take?", a: "The merchant lists free shipping with delivery in 3-7 business days. This page does not state the warehouse location or duty terms, so confirm the details for your address at checkout." },
   { q: "Is there a warranty?", a: "The merchant lists a 2-year warranty covering product defects or malfunctions. Read the merchant's warranty policy for full terms." },
   { q: "Are the prices and savings final?", a: `No. Prices are as listed on the merchant site on ${SITE.dataDate} and can change. The merchant's checkout shows the current price.` },
+  { q: "How long will the Prime Day offers last?", a: "Promotions and the PRIME100 code are set by the merchant and can change or end at any time. The merchant's Prime Day Deals page and checkout show what applies to your order." },
   { q: "What about returns and support?", a: "Return terms are set by the merchant. Review its return and refund policy before ordering. The merchant also lists live chat customer service on its site." },
 ];
 
