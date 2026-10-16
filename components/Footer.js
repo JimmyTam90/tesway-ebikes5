@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="w-full border-t border-slate-800/80 bg-slate-950 text-slate-400">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          {/* Left column: logo (image already contains the brand name and tagline) */}
+          {/* Left column: logo */}
           <div className="flex shrink-0 items-start justify-center md:justify-start">
             <Logo className="h-24 w-auto md:h-28" />
           </div>
