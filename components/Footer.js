@@ -14,7 +14,8 @@ const focusRing =
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-slate-800/80 bg-slate-950 text-slate-400">
+    // data-footer-version lets you confirm which build is live: view-source and search for "footer-v2".
+    <footer data-footer-version="footer-v2" className="w-full border-t border-slate-800/80 bg-slate-950 text-slate-400">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           {/* Left column: logo */}
